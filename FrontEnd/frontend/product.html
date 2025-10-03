@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Detalii Produs</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+</head>
+<body class="dark">
+  <nav>
+    <div class="nav-bar">
+      <i class='bx bx-menu sidebarOpen'></i>
+      <span class="logo navLogo"><a href="index.html">DeviceRec</a></span>
+
+      <div class="menu">
+        <div class="logo-toggle">
+          <span class="logo"><a href="index.html">DeviceRec</a></span>
+          <i class='bx bx-x sidebarClose'></i>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Statistici</a></li>
+        </ul>
+      </div>
+
+      <div class="darkLight-searchBox">
+        <div class="dark-Light">
+          <i class='bx bx-moon moon'></i>
+          <i class='bx bx-sun sun'></i>
+        </div>
+
+        <div class="searchBox">
+          <div class="searchToggle">
+            <i class='bx bx-x cancel'></i>
+            <i class='bx bx-search search'></i>
+          </div>
+          <div class="search-field">
+            <input type="text" id="searchInput" placeholder="Caută un produs...">
+            <i id="searchButton" class='bx bx-search'></i>
+          </div>
+        </div>
+
+        <div class="user-icon" id="userIcon" style="display:none; align-items:center; cursor:pointer;">
+          <i class='bx bx-user'></i>
+          <span id="userNameDisplay" style="margin-left:8px; font-weight:bold;"></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main style="margin-top: 100px; padding: 20px;">
+    <div id="product-details" class="product-detail-container">
+      
+    </div>
+  </main>
+ <script src="config.js"></script>
+  <script src="dark.js"></script>
+  <script src="script.js"></script>
+  <script src="product.js"></script>
+</body>
+</html>

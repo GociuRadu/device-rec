@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <title>Editare produs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="edit.css">
+</head>
+<body>
+  <div class="edit-container">
+    <h1>Editare produs</h1>
+    <form id="editForm" class="edit-form">
+      <div>
+        <label for="name">Nume</label>
+        <input id="name" type="text" required>
+      </div>
+      <div>
+        <label for="type">Tip</label>
+        <input id="type" type="text" required>
+      </div>
+      <div>
+        <label for="price">Preț</label>
+        <input id="price" type="number" step="0.01" required>
+      </div>
+      <div>
+        <label for="color">Culoare</label>
+        <input id="color" type="text">
+      </div>
+      <div>
+        <label for="battery">Baterie</label>
+        <input id="battery" type="text">
+      </div>
+      <div>
+        <label for="image">Imagine (URL)</label>
+        <input id="image" type="text">
+      </div>
+      <div>
+        <label for="features">Specificații (separate cu ;)</label>
+        <textarea id="features" rows="2"></textarea>
+      </div>
+      <div>
+        <label for="tags">Tag-uri (separate cu ,)</label>
+        <textarea id="tags" rows="2"></textarea>
+      </div>
+      <div>
+        <button type="submit">Salvează modificările</button>
+      </div>
+    </form>
+  </div>
+  <script src="config.js"></script>
+  <script src="edit.js"></script>
+</body>
+</html>

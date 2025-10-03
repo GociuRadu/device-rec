@@ -1,0 +1,41 @@
+body {
+  background-color: #121212;
+  color: #ddd;
+  font-family: sans-serif;
+  padding: 2em;
+  margin: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  background: #1f1f1f;
+  padding: 2em;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+h1, h2 {
+  color: #4d94ff;
+  margin-top: 1em;
+}
+
+ul {
+  padding-left: 1.5em;
+  margin-top: 0.5em;
+}
+
+ul li {
+  margin-bottom: 0.6em;
+}
+
+nav {
+  margin-bottom: 2em;
+}
+
+nav a {
+  color: #4d94ff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+}

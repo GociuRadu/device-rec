@@ -1,0 +1,1 @@
+const BASE_URL = "https://web-gociuradu-stativadarius.onrender.com";

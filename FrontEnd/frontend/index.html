@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Recomandări electronice</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+</head>
+<body>
+  <nav>
+    <div class="nav-bar">
+      <i class='bx bx-menu sidebarOpen'></i>
+      <span class="logo navLogo"><a href="index.html">DeviceRec</a></span>
+
+      <div class="menu">
+        <div class="logo-toggle">
+          <span class="logo"><a href="index.html">DeviceRec</a></span>
+          <i class='bx bx-x sidebarClose'></i>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html">Statistici</a></li>
+        </ul>
+      </div>
+      <div class="darkLight-searchBox">
+        <div class="dark-Light">
+          <i class='bx bx-moon moon'></i>
+          <i class='bx bx-sun sun'></i>
+        </div>
+
+        <div class="searchBox">
+          <div class="searchToggle">
+            <i class='bx bx-x cancel'></i>
+            <i class='bx bx-search search'></i>
+          </div>
+          <div class="search-field">
+            <input type="text" id="searchInput" placeholder="Caută un produs...">
+            <i id="searchButton" class='bx bx-search'></i>
+          </div>
+        </div>
+
+        <div class="user-icon" id="userIcon" style="display:none; align-items:center; cursor:pointer;">
+          <i class='bx bx-user'></i>
+          <span id="userNameDisplay" style="margin-left:8px; font-weight:bold;"></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="filter-container">
+    <button id="openFilterBtn" class="filter-open-btn">🔎Filtre</button>
+  </div>
+
+  <div id="filterPopup" class="filter-popup hidden">
+    <div class="filter-content">
+      <span id="closeFilterBtn" class="close-btn">&times;</span>
+      <h2>Filtrare produse</h2>
+
+      <label for="filterType">Tip dispozitiv:</label>
+      <select id="filterType">
+        <option value="">Toate</option>
+        <option value="laptop">Laptop</option>
+        <option value="smartphone">Smartphone</option>
+        <option value="tablet">Tabletă</option>
+        <option value="drone">Dronă</option>
+        <option value="other">Altele</option>
+      </select>
+
+      <label>Culoare:</label>
+      <div class="color-options">
+        <div class="color-box" data-color="black" style="background:black;"></div>
+        <div class="color-box" data-color="white" style="background:white; border:1px solid #ccc;"></div>
+        <div class="color-box" data-color="gray" style="background:gray;"></div>
+        <div class="color-box" data-color="blue" style="background:blue;"></div>
+        <div class="color-box" data-color="red" style="background:red;"></div>
+        <div class="color-box" data-color="green" style="background:green;"></div>
+        <div class="color-box" data-color="yellow" style="background:yellow;"></div>
+        <div class="color-box" data-color="gold" style="background:gold;"></div>
+        <div class="color-box" data-color="silver" style="background:silver;"></div>
+        <div class="color-box" data-color="pink" style="background:pink;"></div>
+        <div class="color-box" data-color="purple" style="background:purple;"></div>
+        <div class="color-box" data-color="orange" style="background:orange;"></div>
+        <div class="color-box" data-color="brown" style="background:brown;"></div>
+      </div>
+
+      <label for="priceRange">Preț maxim: <span id="priceValue">2500</span> RON</label>
+      <input type="range" id="priceRange" min="0" max="10000" step="50" value="2500">
+
+      <label for="filterSource">Sursă produs:</label>
+      <select id="filterSource">
+        <option value="">Toate</option>
+        <option value="emag">emag</option>
+        <option value="cell">CEL.ro</option>
+      </select>
+
+      <button id="applyFiltersBtn" class="apply-filter-btn">Aplică filtre</button>
+    </div>
+  </div>
+
+  <div id="product-list">Se încarcă produse...</div>
+
+ 
+  <div style="text-align:center; margin-top: 40px;">
+    <div class="export-import-panel">
+
+    <button id="exportJsonBtn" class="export-btn">Exportă JSON</button>
+    <button id="exportCsvBtn" class="export-btn">Exportă CSV</button>
+
+    <form id="importForm" enctype="multipart/form-data" style="margin-top: 20px;">
+      <input type="file" id="importFile" accept=".json,.csv" required>
+      <button type="submit">Importă produse</button>
+    </form>
+  </div>
+</div>
+  <div style="text-align:center; margin-top: 30px;">
+    <a href="https://web-gociuradu-stativadarius.onrender.com/rss" style="font-weight: bold; color: #4070F4; text-decoration: none; font-size: 1.1em;">
+      Vizualizează feedul RSS cu cele mai populare produse
+    </a>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="dark.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

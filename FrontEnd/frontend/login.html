@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Autentificare / Înregistrare</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="login.css"/>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+</head>
+<body>
+  <div class="login-container">
+       <div id="login-section">
+      <h1>Autentificare</h1>
+      <form id="loginForm">
+        <input type="text" id="loginUsername" placeholder="Username" required/>
+        <input type="password" id="loginPassword" placeholder="Parolă" required/>
+        <div id="login-error" class="error-msg"></div>
+        <button type="submit">Login</button>
+      </form>
+      <p>Nu ai cont? <a href="#" onclick="toggleForms()">Înregistrează-te</a></p>
+    </div>
+
+    <div id="register-section" style="display:none;">
+      <h1>Înregistrare</h1>
+      <form id="registerForm">
+        <input type="text" id="registerUsername" placeholder="Username nou" required/>
+        <input type="password" id="registerPassword" placeholder="Parolă nouă" required/>
+        <div id="register-error" class="error-msg"></div>
+        <button type="submit">Creează cont</button>
+      </form>
+      <p>Ai deja cont? <a href="#" onclick="toggleForms()">Autentifică-te</a></p>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="dark.js"></script>
+  <script src="login.js"></script>
+</body>
+</html>

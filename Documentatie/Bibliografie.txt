@@ -1,0 +1,12 @@
+Pentru realizarea proiectului am folosit urmatoarele resursele:
+https://www.youtube.com/watch?v=TWiy3dGSmgk&list=PLImJ3umGjxdBzMlTvJk1iz3qFyJhl28S5 - meniu/main page + dark mode/light mode
+https://www.youtube.com/watch?v=9FNNkzPBFcE - cardurile produselor
+https://www.youtube.com/watch?v=kOdIzhPfLuo -scraping folosind pupeteer
+https://www.geeksforgeeks.org/javascript/where-to-put-javascript-in-an-html-document -javascript
+https://structurizr.com/dsl-pentru diagrame
+https://bluegrid.io/blog/how-to-setup-api-endpoint-for-a-simple-project-in-node-js/ - Pentru endpoint-uri si server in mare
+https://www.tutorialspoint.com/rss/rss_quick_guide.htm-RSS
+https://www.youtube.com/watch?v=2TndlokaEZg&list=PLewGdhs0k9xFAc6ukYy8c9ZOGJ8LgBPfr -login+register forms
+
+
+
