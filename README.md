@@ -1,68 +1,53 @@
-Proiect: Catalog Produse - Aplicatie Web
+# device-rec — Electronics Catalog
 
-Descriere:
-Aceasta aplicatie web permite gestionarea si explorarea unui catalog de produse electronice precum telefoane, tablete sau laptopuri.
-Utilizatorii pot cauta si filtra produse, iar administratorii au acces la functionalitati de modificare si stergere.
-Datele despre produse pot fi adaugate manual sau obtinute automat prin scraping de pe site-uri externe (eMAG si CEL.ro).
+A web application for browsing and managing a catalog of phones, tablets and laptops, built on Node.js **without a web framework** — routing, sessions and templating are handled by hand.
 
-Demo online:
-Aplicatia este disponibila si online la urmatoarea adresa:
-https://web-gociuradu-stativadarius.onrender.com
+![Node.js](https://img.shields.io/badge/Node.js-339933?logo=nodedotjs&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-003B57?logo=sqlite&logoColor=white)
+![Puppeteer](https://img.shields.io/badge/Puppeteer-40B5A4?logo=puppeteer&logoColor=white)
 
-Functionalitati principale:
+**Live demo:** https://web-gociuradu-stativadarius.onrender.com
 
-- Cautare produse dupa nume 
-- Filtrare dupa:
-    * Tip produs (smartphone, laptop etc.)
-    * Culoare
-    * Pret maxim
-    * Sursa produsului: emag / cell /
-- Vizualizare cele mai populare 100 produse (ordonate dupa popularitate)
-- Cresterea automata a popularitatii unui produs cand este accesat
-- Export al tuturor produselor in format JSON si CSV
-- Autentificare utilizatori si administratori
-- Protejare operatii sensibile (editare, stergere) prin verificarea rolului admin
-- Interfata separata pentru administratori 
-- Suport pentru scraping de produse de pe eMAG si CEL.ro
-- Generare RSS cu cele mai recente produse
+## Features
 
-Tehnologii utilizate:
+**For visitors**
+- Search products by name
+- Filter by product type, colour, maximum price and source
+- Landing page with the 100 most popular products
+- Popularity score increases automatically as products are viewed
+- Export the current result set to JSON or CSV
+- RSS feed of the catalog
 
-- Backend: Node.js , SQLite
-- Frontend: HTML, CSS, JavaScript 
-- Web scraping: Puppeteer
-- Baza de date: SQLite3 
+**For administrators**
+- Session-based authentication with separate user and admin roles
+- Add, edit and delete products through an admin panel
+- Import products automatically by scraping eMAG and CEL.ro with Puppeteer
 
+## Architecture
 
-Structura proiectului:
+```
+BackEnd/
+  server.js     # HTTP server, routing, static files
+  login/        # authentication and session handling
+  Products/     # catalog queries, filtering, export
+  Scraper/      # Puppeteer scrapers for eMAG and CEL.ro
+  DataBase/     # SQLite schema and access layer
+  rss.js        # RSS feed generation
+FrontEnd/       # HTML pages, CSS, client-side JavaScript
+Documentatie/   # project documentation
+```
 
-- BackEnd/
-    * server.js - serverul HTTP principal
-    * login/ - gestionare conturi si autentificare
-    * Products/ - clasa Products, metode CRUD si cautare
-    * Scraper/ - logica pentru scraping eMAG si CEL.ro
-    * DataBase/ - scripturi pentru creare baza de date
-    * rss.js - generare feed RSS
+Search is hybrid: results are served from the in-memory catalog first, and fall back to live scraping when the local data does not cover the query.
 
-- FrontEnd/
-    * index.html - pagina principala cu filtre si cautare
-    * login.html - pagina autentificare
-    * edit.html - formular editare produs (admin)
-    * product.html - afisare detalii produs
-    * style.css - stiluri
-    * script.js - functionalitate cautare, filtre, UI
+## Running locally
 
-Cum se ruleaza aplicatia:
+```bash
+npm install
+node BackEnd/server.js
+```
 
-1. Asigura-te ca ai instalat Node.js si SQLite3
-2. Instaleaza dependintele : `npm install`
-3. Porneste serverul: `node BackEnd/server.js`
-4. Acceseaza aplicatia in browser: http://localhost:9099
+Then open http://localhost:9099. Node.js and SQLite3 must be installed.
 
-Autori:
-- Gociu Radu
-- Stativa Darius
- 
-Universitatea "Alexandru Ioan Cuza" din Iasi  
-Facultatea de Informatica  
-Proiect pentru disciplina Tehnologii Web
+## Authors
+
+Gociu Radu and Stativa Darius — Faculty of Computer Science, Alexandru Ioan Cuza University of Iași.
